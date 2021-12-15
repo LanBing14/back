@@ -1,0 +1,47 @@
+@blue:#324157;
+@light-blue:#3A71A8;
+@red:#C03639;
+@pink: #E65D6E;
+@green: #30B08F;
+@tiffany: #4AB7BD;
+@yellow:#FEC171;
+@panGreen: #30B08F;
+
+//sidebar
+@menuBg:#4B9DF3;
+@subMenuBg:#2C75D4;
+@menuHover:#2C75D4;
+@subMenuHover:#2C75D4;
+
+@menuText:#fff;
+@menuActiveText:#fff;
+@subMenuActiveText:#f4f4f5;
+
+@sideBarWidth: 180px;
+
+//背景色
+@bgGreey: #F5F6FA;
+
+//数值px
+@logoWrapHeight: 124px; // logo区域的高度
+@navHeight: 56px; // 顶部的高度
+@navTagsViewHeight: 52px; // tabs视图切换按钮区域的高度
+@pageContenbodyMinH: 370px; // 主体内容区域的最小高度
+
+@media screen and (max-height: 768px){
+    @navHeight: 40px;
+    .navbar{
+        height: 45px;
+    }
+}
+
+:export {
+    menuText: @menuText;
+    menuActiveText: @menuActiveText;
+    subMenuActiveText: @subMenuActiveText;
+    menuBg: @menuBg;
+    menuHover: @menuHover;
+    subMenuBg: @subMenuBg;
+    subMenuHover: @subMenuHover;
+    sideBarWidth: @sideBarWidth;
+}

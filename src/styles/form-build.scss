@@ -1,0 +1,105 @@
+.fl {
+    float: left;
+}
+
+.querySign-table {
+    margin: 0 -10px;
+
+    td {
+        padding: 0 10px;
+    }
+}
+
+.item-area {
+    padding: 28px 15px !important;
+    background-color: $bgGreey;
+
+    >>> .el-form-item__content {
+        display: flex;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    & > .el-form-item {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.interface-title {
+    clear: both;
+    font-weight: normal;
+    margin-top: 0.48rem;
+    margin-bottom: 0.16rem;
+    border-left: 3px solid #2395f1;
+    padding-left: 8px;
+}
+
+.left-top {
+    margin-bottom: 20px;
+
+    .actions {
+        float: right;
+    }
+}
+
+.pp-checkbox-item {
+    width: 100%;
+
+    & + & {
+        margin-top: 6px;
+    }
+}
+
+.icon-close {
+    font-size: 14px;
+    color: #ff5248;
+    cursor: pointer;
+}
+
+.left-content {
+    height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+.left-ul-wrap {
+    ul {
+        list-style: none;
+        padding-left: 2em;
+    }
+
+    li {
+        border: 1px solid #ccc;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    li + li {
+        margin-top: 10px;
+    }
+
+    .sortable-chosen {
+        background-color: $--color-primary;
+        color: #fff;
+    }
+}
+
+.border-dashed {
+    border: 1px dashed #464444;
+    padding: 8px 0;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.pp-popover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}

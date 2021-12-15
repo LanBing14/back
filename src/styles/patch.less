@@ -1,0 +1,210 @@
+//背景
+.bg-white{
+    background-color: #fff;
+}
+.bg-grey{
+    background-color: @bgGreey;
+}
+//内填充
+.pd-5{
+    padding: 5px;
+}
+.pd-10{
+    padding: 10px;
+}
+.pd-15{
+    padding: 15px;
+}
+
+//纯文字提示颜色
+.tipText{
+    color: #909399;
+}
+
+//正文区域
+.app-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+.page-content{
+    padding: 0 20px 20px;
+    flex: 1;
+    .page-content-body{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100%;
+        padding: 10px 32px;
+        border: 5px solid #F5F6FA;
+    }
+}
+
+
+//表单搜索样式
+.searchForm-wrap{
+    .el-date-editor.el-input{
+        width: 180px;
+    }
+    input.el-input__inner{
+        width: 178px;
+    }
+    .el-select {
+        input.el-input__inner{
+            width: 100%;
+        }
+    }
+}
+
+//ckeditor修改
+.cke_dialog_ui_file iframe form label{
+    display: block !important;
+}
+
+//行内表单
+.el-form--inline{
+    overflow: hidden;
+    background: @bgGreey;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    .el-form-item{
+        margin-bottom: 5px;
+        margin-top: 5px;
+        float: left;
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+    .el-form-item--mini.el-form-item{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .btns{
+        .filter-item{
+            float: left;
+            min-width: 83px;
+            &+.filter-item{
+                margin-left: 10px;
+            }
+            .el-upload{
+                button{
+                    min-width: 83px;
+                }
+            }
+        }
+    }
+}
+//标签查询表单
+.queryTags-wrap{
+    .el-form-item--mini.el-form-item{
+        margin-bottom: 10px;
+    }
+}
+
+
+//暂无内容数据
+.content-nothing{
+    img{
+        width: 200px;
+        display: block;
+        margin: 30px auto;
+    }
+}
+
+//flex布局
+.flex{
+    display: flex;
+    .flex-primary{
+        flex: 1;
+    }
+    .flex-2{
+        flex: 2;
+    }
+}
+
+
+//边框线
+//主色蓝
+.border-left-primary-1{
+    border-left: 1px solid @primary-color;
+    padding-left: 10px;
+}
+.border-left-primary-3{
+    border-left: 3px solid @primary-color;
+    padding-left: 10px;
+}
+
+
+//仿表格
+.like-table {
+    display: table;
+    width: 100%;
+    .l-head {
+        font-weight: 500;
+        display: table-header-group;
+        & > div {
+            text-align: center;
+            line-height: 28px;
+            display: table-cell;
+        }
+    }
+
+    .l-body {
+        color: #606266;
+        display: table-row-group;
+        & > div {
+            display: table-row;
+            & > div {
+                text-align: center;
+                margin-top: 10px;
+                display: table-cell;
+                vertical-align: middle;
+                padding: 6px;
+                &>span, &>div {
+                    display: block;
+                    background-color: #fff;
+                    border: 1px solid #DCDFE6;
+                    border-radius: 3px;
+                    padding: 6px;
+                    min-height: 34px;
+                }
+                &>div.el-form-item{
+                    border: 0;
+                    padding: 0;
+                }
+                //div.el-form-item, div.el-form-item div, div.el-form-item span{
+                //    border: 0;
+                //    padding: 0;
+                //}
+            }
+        }
+    }
+}
+
+//table中的上传控件
+table .el-upload-list__item{
+    font-size: 12px;
+}
+
+//标题
+.interface-title {
+    clear: both;
+    font-weight: normal;
+    margin-top: 0.48rem;
+    margin-bottom: 0.16rem;
+    border-left: 3px solid @primary-color;
+    padding-left: 8px;
+}
+
+//添加表单控件中label为必填时样式
+.el-form-item-required{
+    &>label{
+        &::before{
+            content: '*';
+            color: #F56C6C;
+            margin-right: 4px;
+        }
+    }
+}

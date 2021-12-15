@@ -1,0 +1,16 @@
+export * from "./department";
+export * from "./dictionary";
+export * from "./holiday";
+export * from "./log";
+export * from "./mail";
+export * from "./menu";
+export * from "./notice";
+export * from "./role";
+export * from "./user";
+export * from "./saas";
+export * from "./area";
+export * from "./feedback";
+export * from "./channel";
+export * from "./repair";
+export * from "./enterpriseCertification";
+export { upms as modelBase, fxb } from "@/api/index";

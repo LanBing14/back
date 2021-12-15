@@ -1,0 +1,393 @@
+@import './element-variables.scss';
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './icon.scss';
+@import './btn.scss';
+@import './patch.scss';
+@import "./form-build.scss";
+
+body {
+    height: 100%;
+    overflow: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+    font-weight: 700;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#app {
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.padding-content {
+    padding: 4px 0;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+    color: #3698fb;
+    text-decoration: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+div:focus {
+    outline: none;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.pr-5 {
+    padding-right: 5px;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+.block {
+    display: block;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.inlineBlock {
+    display: block;
+}
+
+.clearfix {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+code {
+    background: #eef1f6;
+    padding: 15px 16px;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 36px;
+    font-size: 15px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+    a {
+        color: #337ab7;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(32, 160, 255);
+        }
+    }
+}
+
+.warn-content {
+    background: rgba(66, 185, 131, .1);
+    border-radius: 2px;
+    padding: 16px;
+    padding: 1rem;
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+
+    a {
+        color: #42b983;
+        font-weight: 600;
+    }
+}
+
+//main-container全局样式
+.app-container {
+    //background-color: #eceef1;
+}
+
+.components-container {
+    margin: 30px 50px;
+    position: relative;
+}
+
+//.pagination-container {
+//  margin-top: 30px;
+//}
+
+.text-center {
+    text-align: center
+}
+
+.sub-navbar {
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    transition: 600ms ease position;
+    background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+    .subtitle {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    &.draft {
+        background: #d0d0d0;
+    }
+
+    &.deleted {
+        background: #d0d0d0;
+    }
+}
+
+.link-type,
+.link-type:focus {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(32, 160, 255);
+    }
+}
+
+
+//refine vue-multiselect plugin
+.multiselect {
+    line-height: 16px;
+}
+
+.multiselect--active {
+    z-index: 1000 !important;
+}
+
+.el-checkbox + .el-checkbox {
+    margin-left: 0;
+}
+
+.el-dropdown-menu .el-checkbox {
+    width: 100%;
+}
+
+.el-message i.el-message__icon, .el-message p.el-message__content {
+    float: left;
+}
+
+.el-alert i.el-alert__icon, .el-message p.el-alert__content {
+    float: left;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: #e6f7ff;
+}
+
+
+.el-menu-item i, .el-submenu__title i:first-child, .el-menu-item svg, .el-submenu__title svg {
+    margin-right: 8px;
+    font-size: 1em;
+}
+
+.el-submenu__title, .el-submenu__title i:first-child, .el-menu-item i:first-child, .el-submenu__title svg {
+    color: inherit;
+}
+
+.el-submenu.is-active .el-submenu__title svg {
+    color: inherit;
+}
+
+#app .sidebar-container .svg-icon {
+    margin-right: 8px;
+}
+
+//tag样式
+.el-tag {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+//小型布局下的tag样式
+body .el-tag--mini {
+    height: 26px !important;
+    line-height: 26px !important;
+    padding: 0 10px !important;
+}
+
+.el-table--mini {
+    thead th {
+        font-size: 14px;
+    }
+}
+
+.el-table thead {
+    color: #333;
+}
+
+
+//.el-form-item:last-child{
+//    margin-bottom: 0 !important;
+//}
+//.el-form-item--mini.el-form-item{
+//    margin-bottom: 26px;
+//}
+.el-form-item--mini .el-form-item__error {
+    margin-top: 5px;
+}
+
+.el-form-item--mini .el-form-item__content {
+    line-height: normal;
+    min-height: 29px;
+}
+
+
+//弹框
+.el-dialog__body {
+    position: relative;
+}
+
+
+//行内表单
+.searchForm-wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.ant-form {
+        overflow: hidden;
+        background: #F5F6FA;
+        padding: 8px 15px;
+        margin-bottom: 15px;
+        .ant-form-item{
+            margin-bottom: 5px;
+            margin-top: 5px;
+            float: left;
+            margin-right: 10px;
+            &:last-child{
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .ant-form-item--mini.el-form-item{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .ant-select {
+        width: 174px;
+    }
+    .btns{
+        .filter-item{
+            min-width: 83px;
+            &+.filter-item{
+                margin-left: 10px;
+            }
+            .a-upload{
+                button{
+                    min-width: 83px;
+                }
+            }
+        }
+    }
+    .ant-form-item:last-child {
+        margin-right: 0;
+    }
+}
+
+
+
+// 全屏loading样式
+.el-loading-mask {
+    position: absolute;
+    z-index: 2000;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+
+    .el-loading-spinner {
+        top: 50%;
+        margin-top: -21px;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+
+        .el-loading-text {
+            color: #4B9DF3;
+            margin: 3px 0;
+            font-size: 14px;
+        }
+
+        i {
+            color: #4B9DF3;
+        }
+
+        .el-icon-loading {
+            -webkit-animation: rotating 2s linear infinite;
+            animation: rotating 2s linear infinite;
+        }
+    }
+
+    &.is-fullscreen {
+        position: fixed;
+
+        .el-loading-spinner {
+            margin-top: -25px;
+        }
+    }
+}
+
+
+body{
+    .ant-checkbox-wrapper + .ant-checkbox-wrapper{
+        margin-left: 0;
+    }
+    .ant-checkbox-wrapper {
+        margin-right: 8px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
